@@ -204,6 +204,30 @@
 
         <p class="copyright">&copy;2022 My-Portfolio All Rights Reserved.</p>
     </footer>
+        
+    <p class="button">🔝</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var btn = $('.button');
+            
+            $(window).on('load scroll', function(){
+            if($(this).scrollTop() > 100) {
+                btn.addClass('active');
+            }
+            else{
+                btn.removeClass('active');
+            }
+        });
+            
+        btn.on('click',function () {
+            $('body,html').animate({
+            scrollTop: 0
+                });
+            });
+        });
+    </script>
     
 </body>
 </html>
